@@ -3,7 +3,7 @@ import { Svg } from 'expo';
 
 const { Circle, Ellipse, G, Path } = Svg;
 
-export class Smiley extends React.Component {
+export default class Smiley extends React.Component {
     constructor(props){
         super(props);
     }
