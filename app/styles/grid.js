@@ -6,7 +6,7 @@ const grid = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'flex-end'
     },
-    container: {
+    homeContainer: {
         flex: 8,
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -15,7 +15,24 @@ const grid = StyleSheet.create({
     buttonContainer: {
         flex: 1,
         flexDirection: 'row',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        justifyContent: 'flex-end',
+        
+        borderColor: '#5E5E5E',
+        borderTopWidth: 2,
+        //marginTop: 150,
+    },
+    wrapper: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        backgroundColor: '#DFF4F3',
+    },
+    container: {
+        flex: 8,
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
     },
 });
 

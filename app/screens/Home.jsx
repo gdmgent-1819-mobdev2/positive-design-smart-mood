@@ -37,7 +37,7 @@ export default class Home extends Component {
 
     return (
       <Animated.View style={[grid.animatedContainer, {backgroundColor: interpolateColor}]}>
-        <View style={grid.container}>
+        <View style={grid.homeContainer}>
           <Smiley style={home.Smiley} curve={value} />
           
           <Slider style={home.slider}
@@ -48,7 +48,7 @@ export default class Home extends Component {
           />
         </View>
         <View style={grid.buttonContainer}>
-          <Button label='Next' />
+          <Button label='Next' onPress={() => this.props.navigation.navigate('Activity', {bgColor: interpolateColor})}/>
           <Button label='Skip' />
         </View>
       </Animated.View>
