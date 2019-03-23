@@ -1,7 +1,7 @@
-import Button from './Button';
+import CustomButton from './CustomButton';
 import Smiley from './Smiley';
 
 export {
-    Button,
+    CustomButton,
     Smiley,
 }

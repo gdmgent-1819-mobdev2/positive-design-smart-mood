@@ -3,7 +3,7 @@ import { Text, TouchableOpacity } from 'react-native';
 import { components } from '../styles';
 
 
-export default class Button extends React.Component {
+export default class CustomButton extends React.Component {
   constructor(props){
     super(props);
 
