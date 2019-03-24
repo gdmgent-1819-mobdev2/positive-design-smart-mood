@@ -9,12 +9,13 @@ export class Button extends React.Component {
     super(props);
 
   }
+
   render(){
       let label = this.props.label;
       let onPress = this.props.onPress;
-      let bgColor = this.props.bgColor;
+      let style = this.props.style;
     return (
-      <TouchableOpacity style={components.button} onPress={onPress}>
+      <TouchableOpacity style={style} onPress={onPress}>
         <Text style={components.buttonLabel}> { label } </Text>
       </ TouchableOpacity>
     )

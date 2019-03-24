@@ -1,21 +1,29 @@
 import React from "react";
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import { Home, Activity } from '../screens'
+import { createSwitchNavigator, createAppContainer, createStackNavigator } from "react-navigation";
+import { Home, Activity, Login, Register, SplashScreen } from '../screens';
 
-const AppNavigator = createStackNavigator(
+
+const AuthNavigator = createSwitchNavigator({
+    Login: Login,
+    Register: Register,
+  });
+  
+  const AppNavigator = createStackNavigator(
     {
         Home: Home,
+        Auth: AuthNavigator,
         Activity: Activity,
     },
     {
-        initialRouteName: "Home",
-
-        defaultNavigationOptions: {
-            headerStyle: {
-              display: "none"
-            },
-        },
+      defaultNavigationOptions: () => ({
+        header: null,
+      })
     }
-);
-
-export const AppContainer = createAppContainer(AppNavigator);
+  );
+  
+  const InitialNavigator = createSwitchNavigator({
+    Splash: SplashScreen,
+    App: AppNavigator,
+  });
+  
+  export const AppContainer = createAppContainer(InitialNavigator);

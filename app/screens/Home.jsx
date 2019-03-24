@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Slider, Animated } from 'react-native';
 import { Smiley, Button } from '../components';
-import { home, grid } from '../styles';
+import { home, grid, components } from '../styles';
+import { logout } from '../utils/firebaseService'
 
 export default class Home extends Component {
   constructor(props) {
@@ -25,8 +26,15 @@ export default class Home extends Component {
     }).start();
   }
 
+  handleLogout() {
+    this.setState({
+        currentUser: null,
+    });
+    logout();
+    this.props.navigation.navigate('Splash');
+}
+
   render(){
-    // Storing the value off the slider
     const {value} = this.state;
 
     // Interpolate the background color
@@ -48,8 +56,8 @@ export default class Home extends Component {
           />
         </View>
         <View style={grid.buttonContainer}>
-          <Button label='Next' onPress={() => this.props.navigation.navigate('Activity', {bgColor: interpolateColor})}/>
-          <Button label='Skip' />
+          <Button label='Next' onPress={() => this.props.navigation.navigate('Activity', {bgColor: interpolateColor})} style={components.button}/>
+          <Button onPress={() => this.handleLogout()} label='Skip' style={components.button} />
         </View>
       </Animated.View>
     );

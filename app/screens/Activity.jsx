@@ -31,7 +31,7 @@ export default class Activity extends Component {
 
         <View style={[grid.wrapper, {backgroundColor: bgColor}]}>
             
-            <View style={grid.testContainer}> 
+            <View style={grid.container}> 
                {/* Energy slider  */}
               <Text style={{color: 'white'}}> Energy: {energy} </Text> 
               <Slider style={activity.slider}

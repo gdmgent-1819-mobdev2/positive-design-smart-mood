@@ -12,16 +12,30 @@ const grid = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
     },
+    buttonContainerLogin: {
+        flex: 1,
+        flexDirection: 'row',
+        alignSelf: 'center',
+        justifyContent: 'flex-end',
+        
+        borderColor: '#333',
+        borderTopWidth: 2,
+        marginBottom: '3%'
+        //marginTop: 150,
+    },
+
     buttonContainer: {
         flex: 1,
         flexDirection: 'row',
         alignSelf: 'center',
         justifyContent: 'flex-end',
         
-        borderColor: '#5E5E5E',
+        borderColor: '#333',
         borderTopWidth: 2,
+        //marginBottom: '3%'
         //marginTop: 150,
     },
+
     wrapper: {
         flex: 1,
         flexDirection: 'column',
@@ -31,7 +45,7 @@ const grid = StyleSheet.create({
     container: {
         flex: 8,
         flexDirection: 'column',
-        alignItems: 'flex-end',
+        alignItems: 'center',
         justifyContent: 'center',
     },
 });
