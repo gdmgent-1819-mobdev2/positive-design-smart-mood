@@ -1,0 +1,29 @@
+{
+    "users": {
+        "test@mail.com": {
+            "userId": "1dfdfqeg6qer",
+            "1553468400000": {
+                "day": "25/03/2019",
+                "song": "song test"
+            },
+
+            "1653468400000": {
+                "day": "000000",
+                "song": "song test 2"
+            }
+        },
+
+        "user@mail.com": {
+            "userId": "dfsrze654sdf",
+            "1553468400000": {
+                "day": "25/03/2019",
+                "song": "song test"
+            },
+
+            "1653468400000": {
+                "day": "000000",
+                "song": "song test 2"
+            }
+        }
+    }
+}
